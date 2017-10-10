@@ -1,11 +1,12 @@
 #include <iostream>
 #include <cmath>
 
-int* skalarni_produkt (int* vector_a, int* vector_b) {
+int skalarni_produkt (int* vector_a, int* vector_b) {
 		int skalar = 0;
 		 for (int i = 0; i < 3; i++) {
-			 skalar = skalar + (vector_a[3] * vector_b[3]);
+		   skalar = skalar + (vector_a[i] * vector_b[i]);
 		return skalar;
+		 }
 }
 int main () {
 	int vector_a[3] = {1,2,3};
