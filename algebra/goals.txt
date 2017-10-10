@@ -1,0 +1,29 @@
+TO DO LIST:
+
+STEP 1:
+ - napisi program v c++, ki bo vektorje obravnaval kot C-style tabele s tremi komponentami
+ - za vsako tocko napisi funkcijo, ki bo:
+ 	* sestela dva vektorja a + b
+	* odstela drugega od prvega a - b
+	* natisnila nek vektor v obliki ( ax, ay, az) (uporabi std::cout)
+	* vrnila skalarni produkt?
+
+STEP 2:
+  - napisi struct poimenovan PrimitiveVec z ustreznimi spremenljivkami
+  - funkcije iz prejsnje naloge spremeni tako, da bodo delale na novih vektorjih (overloadaj jih glede na tip parametrov)
+  - funkcije ki sestevajo in odstevajo naj vrnejo nov struct ki je rezultat operacije prejsnjih dveh
+
+
+STEP 3:
+  - struct nadomesti s classom poimenovanim AdvancedVec, ki bo nudil enako funkcionalnost kot struct iz naloge 2
+  - data memberji classa AdvancedVec naj bodo private
+  - funkcije od prej spremeni tako, da bodo delovale na classu AdvancedVec, enako kot prej na structu PrimitiveVec
+  - dodaj konstruktor, da bo mogoce konstruirati vektor s klicem: AdvancedVec new(x, y, z);, a ohrani tudi default constructor
+  - napisi member funkcije ki:
+  	* vektorju pristejejo vektor
+	* vektorju odstejejo vektor
+	* vektor pomnozijo s skalarjem
+	* izracunajo dolzino vektorja
+	* izracunajo skalarni produkt vektorja
+
+  - overload operators so that all the folowing calls for AdvancedVec a, b, c, make sense: a = b + c; a += b, a -= b, a < b ... 
