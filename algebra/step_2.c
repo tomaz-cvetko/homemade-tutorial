@@ -9,10 +9,9 @@ int skalarni_produkt (int* vector_a, int* vector_b) {
 		 }
 }
 int main () {
-	int vector_a[3] = {1,2,3};
-	int vector_b[3] = {1,0,0};
+	int a[3] = {1,2,3};
+	int b[3] = {1,0,0};
 	int produkt = skalarni_produkt(a,b);
-	 skalarni_produkt(vector_a, vector_b, skalar);
-	  std::cout<< " produkt " << std::endl;
+	std::cout<< " produkt " << produkt << std::endl;
   return 0;
 }
