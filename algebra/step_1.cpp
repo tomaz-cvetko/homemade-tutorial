@@ -1,6 +1,22 @@
 #include <iostream>
 #include <cmath>
 
+int* odstej(int* a, int* b, int* rezultat) {
+	for(int i = 0; i < 3; ++i) {
+		
+		*(rezultat + i) = *(a +i) - *(b + i);
+	}
+	return rezultat;
+}
+
+int* sestej(int* a, int* b, int* rezultat) {
+	for(int i = 0; i < 3; ++i){
+		
+		*(rezultat + i) = *(a + i) + *(b + i);
+	}
+	return rezultat;
+}
+
 int skalarni_produkt (int* vector_a, int* vector_b) {
 		int skalar = 0;
 		 for (int i = 0; i < 3; i++) {
@@ -8,10 +24,50 @@ int skalarni_produkt (int* vector_a, int* vector_b) {
 		return skalar;
 		 }
 }
-int main () {
+
+void print_vector(int vector_a) {
+	std::cout << "( ";
+	for(int i = 0; i < 3; ++i){
+		std::cout << result[i];
+		if (i < 2){
+			std::cout << ", ";
+		}
+	}
+	std::cout << ")" << std::endl;
+}
+	
+int main() {
+	int x[3] = {2, 2, 2};
+	int y[3] = {2, 1, 0};
+	int result[3];
+	
 	int a[3] = {1,2,3};
 	int b[3] = {1,0,0};
 	int produkt = skalarni_produkt(a,b);
+
+	sestej(x, y, result);
+	
+	std::cout << "Rezultat je vektor: ( ";
+	for(int i = 0; i < 3; ++i){
+		std::cout << result[i];
+		if (i < 2){
+			std::cout << ", ";
+		}
+	}
+	std::cout << ")" << std::endl;
+	
+	print_vector(vector_a, 3);
 	std::cout<< " produkt " << produkt << std::endl;
-  return 0;
+
+	odstej(x, y, result);
+	std::cout << "Rezultat je vektor: ( ";
+	for(int i = 0; i < 3; ++i) {
+		std:: cout<< result[i];
+		 if (i < 2) {
+			 std::cout << ", ";
+		 }
+	}
+	return 0;
 }
+
+	
