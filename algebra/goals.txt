@@ -9,6 +9,40 @@ STEP 1:
 	* vrnila skalarni produkt?
 
 STEP 2:
+
+Hitro se izkaze, da bi pogosto skupaj radi popredalckali spremenljivke razlicnih tipov - zato je ze v programskem jeziku C
+na voljo pojem struct, ki omogoca, da uporabnik definira skupke poljubnih spremenljivk in nato ta skupek obravnava kot
+celoto. V C++ so structi prav tako na voljo, njihova funkcionalnost pa se v resnici ujema s classi. Torej, tu se zacne
+objektno programiranje. V prejsnjem koraku si o vektorju razmisljal kot o tabeli integerjev (0-ta komponenta je bila x,
+1-va y, 2-ga z) s structi lahko to naredis bolj intuitivno (ni si potrebno zapomniti, da je x na mestu z indeksom 0, ampak
+lahko ze samo strukturo nacrtujemo tako, da nam x componento vrne koscek v stilu:
+
+	PrimitiveVec aPrimitiveVec; // deklaracija objekta tipa PrimitiveVec
+	// ...
+	float x_component = aPrimitiveVec.x; // vrednost x componente pripisemo spremenljivki x_component
+
+Cilj tega koraka je torej tip struct (struct PrimitiveVec), ki po C-jevsko ne varuje svojih member variables pred dostopom
+od zunaj. Se vedno pa bi radi v glavni kodi delali stvari kot prej:
+
+	PrimitiveVec vector_a;
+	PrimitiveVec vector_b;
+	// ... dodeli se jima x, y in z vrednosti
+
+	// odstevamo
+	PrimitiveVec rezultat = odstej(vector_a, vector_b);
+	// enako za sestej
+
+	// printamo
+	print_vector(rezultat);
+	std::cout << std::endl;
+	
+	// izracunamo skalarni produkt
+	float x = skalarno(vector_a, vector_b);
+	std::cout << "Skalarni produkt je: " << x << std::endl;
+
+Za izvedbo bos torej moral prebrati osnove o objektih v C++ (struct in class sta enaki stvari, samo da je v structu po
+defaultu vse public, zato nekoliko bolj primerno za ta STEP 2).
+
   - napisi struct poimenovan PrimitiveVec z ustreznimi spremenljivkami
   - funkcije iz prejsnje naloge spremeni tako, da bodo delale na novih vektorjih (overloadaj jih glede na tip parametrov)
   - funkcije ki sestevajo in odstevajo naj vrnejo nov struct ki je rezultat operacije prejsnjih dveh
