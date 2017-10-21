@@ -1,73 +1,65 @@
 #include <iostream>
 #include <cmath>
 
-int* odstej(int* a, int* b, int* rezultat) {
-	for(int i = 0; i < 3; ++i) {
-		
-		*(rezultat + i) = *(a +i) - *(b + i);
+int* odstej(int* a, int* b, int* result) {
+	for (int i = 0; i < 3; ++i) {
+
+		*(result + i) = *(a + i) - *(b + i);
 	}
-	return rezultat;
+	return result;
 }
 
-int* sestej(int* a, int* b, int* rezultat) {
-	for(int i = 0; i < 3; ++i){
-		
-		*(rezultat + i) = *(a + i) + *(b + i);
+int* sestej(int* a, int* b, int* result) {
+	for (int i = 0; i < 3; ++i) {
+
+		*(result + i) = *(a + i) + *(b + i);
 	}
-	return rezultat;
+	return result;
 }
 
-int skalarni_produkt (int* vector_a, int* vector_b) {
-		int skalar = 0;
-		 for (int i = 0; i < 3; i++) {
-		   skalar = skalar + (vector_a[i] * vector_b[i]);
-		return skalar;
-		 }
+int skalarni_produkt(int* vector_a, int* vector_b) {
+	int skalar = 0;
+	for (int i = 0; i < 3; i++) {
+		skalar = skalar + (vector_a[i] * vector_b[i]);
+	}
+	return skalar;
 }
 
-void print_vector(int vector_a) {
+void print_vector(int* vector_a) {
 	std::cout << "( ";
-	for(int i = 0; i < 3; ++i){
-		std::cout << result[i];
-		if (i < 2){
-			std::cout << ", ";
+	for (int i = 0; i < 3; ++i) {
+		std::cout << vector_a[i];
+		if (i < 2) {
+			std::cout << ", " ;
 		}
 	}
+
 	std::cout << ")" << std::endl;
 }
-	
+
 int main() {
-	int x[3] = {2, 2, 2};
-	int y[3] = {2, 1, 0};
+	int x[3] = { 2, 2, 2 };
+	int y[3] = { 2, 1, 0 };
 	int result[3];
-	
-	int a[3] = {1,2,3};
-	int b[3] = {1,0,0};
-	int produkt = skalarni_produkt(a,b);
+
+	int vector_a[3] = { 1,2,3 };
+	int vector_b[3] = { 1,0,0 };
+	int produkt = skalarni_produkt(vector_a, vector_b);
 
 	sestej(x, y, result);
-	
-	std::cout << "Rezultat je vektor: ( ";
-	for(int i = 0; i < 3; ++i){
-		std::cout << result[i];
-		if (i < 2){
-			std::cout << ", ";
-		}
-	}
-	std::cout << ")" << std::endl;
-	
-	print_vector(vector_a, 3);
-	std::cout<< " produkt " << produkt << std::endl;
+	//std::cout << "Rezultat je vektor: ( ";
+
 
 	odstej(x, y, result);
-	std::cout << "Rezultat je vektor: ( ";
-	for(int i = 0; i < 3; ++i) {
-		std:: cout<< result[i];
-		 if (i < 2) {
-			 std::cout << ", ";
-		 }
-	}
+	//std::cout << "Rezultat je vektor: ( ";
+
+
+	print_vector(vector_a);
+	//std::cout << " produkt " << produkt << std::endl;
+
+
+	skalarni_produkt(vector_a, vector_b);
+	//std::cout << "Skalarni produkt = " << produkt << std::endl;
+
 	return 0;
 }
-
-	
