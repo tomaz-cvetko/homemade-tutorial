@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hawaii/Documents/c++/homemade-tutorial/algebra/guidance/test.cpp
+iostream
+-
+vektor.h
+/home/hawaii/Documents/c++/homemade-tutorial/algebra/guidance/vektor.h
+
+/home/hawaii/Documents/c++/homemade-tutorial/algebra/guidance/vektor.cpp
+
+/home/hawaii/Documents/c++/homemade-tutorial/algebra/guidance/vektor.h
+cmath
+-
+

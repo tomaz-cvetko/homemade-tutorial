@@ -1,0 +1,3 @@
+/home/hawaii/Documents/c++/homemade-tutorial/algebra/guidance/CMakeFiles/edit_cache.dir
+/home/hawaii/Documents/c++/homemade-tutorial/algebra/guidance/CMakeFiles/rebuild_cache.dir
+/home/hawaii/Documents/c++/homemade-tutorial/algebra/guidance/CMakeFiles/vektorji.dir
