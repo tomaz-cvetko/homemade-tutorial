@@ -35,11 +35,7 @@ PrimitiveVec sestej(PrimitiveVec a, PrimitiveVec b) {
 
 float skalarni_produkt(PrimitiveVec a, PrimitiveVec b) {
 	float rezultat;
-	PrimitiveVec c;
-	c.x = a.x * b.x;
-	c.y = a.y * b.y;
-	c.z = a.z * b.z;
-	rezultat = c.x + c.y + c.z;
+	rezultat = a.x * b.x + a.y * b.y + a.z * b.z;
 	return rezultat;
 }
 
